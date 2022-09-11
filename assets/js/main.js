@@ -71,7 +71,8 @@ function store(value) {
 function load() {
   const darkmode = localStorage.getItem("darkmode");
 
-  //if the dark mode was never activated
+  // if the dark mode was never activated
+
   if (!darkmode) {
     store(false);
     icon.classList.add("bxs-sun");
@@ -79,6 +80,7 @@ function load() {
     body.classList.add("darkmode");
     icon.classList.add("bxs-moon");
   } else if (darkmode == "false") {
+    body.classList.remove("darkmode");
     icon.classList.add("bxs-sun");
   }
 }
